@@ -1,0 +1,29 @@
+﻿@model CarsStockListing.Models.StockListingResult
+
+@{
+    ViewBag.Title = "Stock Listing";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<table>
+    <tr>
+        <th>
+            Network Id
+        </th>
+        <th>
+            Display Title
+        </th>
+    </tr>
+
+@foreach (var item in Model.Result) {
+    <tr>
+        <td>
+            &nbsp; @(item.NetworkId)
+        </td>
+        <td>
+            &nbsp; @(item.DisplayTitle)
+        </td>
+    </tr>
+}
+</table>
